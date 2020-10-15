@@ -1,0 +1,60 @@
+/* 全局样式 */
+@import 'pages/style/weui.wxss';
+@import 'pages/index/index.wxss';
+/* wxss不支持通配符*符号，因此这里单独写各元素 */
+
+page,
+view,
+iamge,
+swiper,
+swiper-item,
+navigator,
+video {
+    box-sizing: border-box;
+}
+
+/**index.wxss**/
+.userinfo {  
+    position: relative;  
+    width: 750rpx;  
+    height: 320rpx;  
+    color: #fff;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+  }  
+    
+  .userinfo-avatar {  
+    overflow:hidden;  
+    display: block;  
+    width: 160rpx;  
+    height: 160rpx;  
+    margin: 20rpx;  
+    margin-top: 50rpx;  
+    border-radius: 50%;  
+    border: 2px solid #fff;  
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+  }  
+    
+  .userinfo text {  
+    /* color: #fff; */  
+    font-size: 14px;  
+    background-color: #c0c0c0;  
+    border-radius:40%;  
+  }
+  .userinfo-nickname {
+    color: #aaa;
+  }
+  
+  .headerView{
+    background-color: yellowgreen;
+    height: 50px;
+    font-family:"Open Sans", Helvetica, Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    background: -webkit-linear-gradient(left top,#A8828D,rgba(240, 128, 128, 0.781));  
+    background: -o-linear-gradient(left top,#A8828D,#F08080);  
+    background: -moz-linear-gradient(left top,#A8828D,#F08080);  
+    background: -mos-linear-gradient(left top,#A8828D,#F08080);  
+    background: linear-gradient(left top,#A8828D,#F08080);  
+  }

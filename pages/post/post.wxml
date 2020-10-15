@@ -1,0 +1,69 @@
+<view class="page">
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="weui-cells__title">动态标题</view>
+  <!-- <view class="nud"> -->
+  <view class="textWindow">
+  <input type="text" class="weui-search-bar__input" placeholder="请输入标题" focus="{{true}}" bindinput="topicInput" />
+  </view>
+  <!-- </view> -->
+  <view class="weui-cells__title">动态内容</view>
+  <!-- <view class="weui-cells weui-cells_after-title"> -->
+    <view class="weui-cell1">
+        <textarea class="weui-textarea1" maxlength="200" name="content" value='{{content}}' placeholder="写点什么吧" style="height:10em" auto-focus="{{true}}" />
+    </view>
+  <!-- </view> -->
+
+
+
+
+  <!-- <button class="weui-btn page_btn_spacing" type="submit">发布动态</button> -->
+  <button class="buttona" form-type="submit">发布动态</button>
+
+  <view style='height:80px'></view>
+
+</form>
+
+</view>
+
+
+<!-- <view class="box">
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+    <view class="shuru"> 
+        <textarea class="shuru1"placeholder="请输入您的内容" placeholder-style="font-size:13pt;"  name="content"/>
+    </view>
+
+     <view class="images-wrapper">
+          <view class="images-list">
+            <block wx:for="{{chooseImageUrl}}" wx:for-item="image">
+              <image src="{{image}}" class="images-image" data-src="{{image}}" bindtap="previewImage"></image>
+              <text class='chooseImageClose' data-index="{{index}}" bindtap='Close'>x</text>
+            </block>
+            
+            <view class="images-image image-plus" bindtap="chooseImage">
+              <view class="image-plus-horizontal"></view>
+              <view class="image-plus-vertical"></view>
+            </view>
+          </view>
+    </view>
+    
+    <view class="address">
+        <view class="xian"></view>
+
+        <view bindtap="bindAddress">
+            <image class="biao" src="../../images/address.png" mode="aspectFit"></image>
+            <text class="weizhi">{{addRessName?addRessName:'所在位置'}}
+                <input name="address" value="{{addRessName}}" type='text'/>
+            </text>
+            <image class="jiantou" src="../../images/jt.png" mode="aspectFit"></image>
+        </view>
+    </view>    
+
+    <button class="buttona" form-type="submit">提交</button>
+    
+</form>
+
+</view>
+ -->

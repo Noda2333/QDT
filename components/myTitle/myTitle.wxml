@@ -1,0 +1,9 @@
+<view class="my-title">
+    <!-- 搜索 -->
+    <view class="logo" bindtap="btnClick">
+        <image src="../../icon/search.png" />
+    </view>
+    <view class="logo2">
+        <text>趣动态</text>
+    </view>
+</view>

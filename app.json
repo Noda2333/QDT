@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/post/post",
+    "pages/mymoment/mymoment",
+    "pages/searchResult/searchResult",
+    "pages/setInfo/setInfo",
+    "pages/my/myMsg/myMsg",
+    "pages/my/myFollow/myFollow",
+    "pages/my/myCollection/myCollection",
+    "pages/comment/comment",
+    "pages/tab/tab",
+    "pages/userInfo/userInfo",
+    "pages/my/userList/userList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "趣动态",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#F08080",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/main1.png",
+        "selectedIconPath": "img/main.png"
+      },
+      {
+        "pagePath": "pages/post/post",
+        "text": "发布",
+        "iconPath": "img/plus.png",
+        "selectedIconPath": "img/plus1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "img/user.png",
+        "selectedIconPath": "img/user1.png"
+      }
+    ]
+  }
+}

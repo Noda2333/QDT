@@ -1,0 +1,20 @@
+/* pages/tab/tab.wxss */
+.play-count0{
+  width:150rpx;
+  float: right;
+  margin-right: 50rpx;
+  background: rgba(255, 255, 255, 10);
+}
+.play-count1{
+  width:150rpx;
+  float: right;
+  background: rgba(0, 255, 255,50);
+  margin-right: 50rpx;
+}
+.tab{
+  margin-left: 50rpx;
+  color:white;
+  float: left;
+  line-height: 50px;
+  font-size: 25px;
+}

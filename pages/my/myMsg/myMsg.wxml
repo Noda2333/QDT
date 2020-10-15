@@ -1,0 +1,6 @@
+<!--pages/my/myFollow/myFollow.wxml-->
+<view wx:for="{{msgList}}" wx:key="index">
+  <view class='msgListView' bindtap=''>
+    <text class='MsgTxt' >{{index+1}}、{{item.fields.User_ID}}在动态"{{item.fields.Activity_ID}}"中回复了我:{{item.fields.Reply_content}}</text>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+/* pages/userInfo/userInfo.wxss */
+.username{
+  text-align: center;
+}

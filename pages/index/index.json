@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-title": "../../components/myTitle/myTitle"
+  },
+  "navigationStyle": "custom"
+}

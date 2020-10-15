@@ -1,0 +1,52 @@
+<view>
+    <!-- 视频详情 -->
+    <view class="videoInfo-container">
+        <!-- 标题 -->
+        <view class="video-title">
+            <text>{{momentDetail.Activity_topic}}</text>
+        </view>
+        <text class="author1">{{momentDetail.User_ID}}</text>
+        <view class = "video-title2">
+          <text>{{momentDetail.Activity_content}}</text>
+        </view>
+        <!-- 视频信息 -->
+        <view class="video-detail">
+            <!-- 作者 -->
+            
+            <!-- 播放量 -->
+            <button wx:if="{{!dzed}}" class="play-count" bindtap="thumbup">点赞</button>
+            <button wx:if="{{dzed}}" class="play-count0" bindtap="thumbup">取消点赞</button>
+            <!-- 评论量 -->
+            <button class="play-count" bindtap="Reply">回复</button>
+            <button wx:if="{{!csed}}" class="play-count" bindtap="Star">收藏</button>
+            <button wx:if="{{csed}}" class="play-count0" bindtap="Star">收藏</button>
+            <button wx:if="{{candel}}" class="play-count1" bindtap="del">删除该动态</button>
+        </view>
+    </view>
+    <!-- 评论列表 -->
+    <!-- 评论数 -->
+    <view class="comments-area">
+        <view class="comments-count">回复</view>
+        <!-- 评论列表 -->
+        <view class="comments-list" wx:for="{{commentsList}}" wx:key="index">
+            <!-- 左侧头像 -->
+            <!-- <view class="comment-image">
+                <image mode="widthFix" src="{{item.userIconSrc}}" />
+            </view> -->
+            <!-- 右侧评论信息 -->
+            <view class="comment-info-container">
+                <!-- 作者&评论时间 -->
+                <view class="comment-info">
+                    <text class="comment-author">{{item.fields.User_ID}}</text>
+                    <text class="comment-date">{{item.fields.Reply_time}}</text>
+                </view>
+                <!-- 评论内容 -->
+                <view class="comment-content-container">
+                    <text class="comment-content">{{item.fields.Reply_content}}</text>
+                    <text class="class1" wx:if="{{candel}}" bindtap="delcm" id="{{item.fields.Reply_ID}}">删除</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    
+</view>

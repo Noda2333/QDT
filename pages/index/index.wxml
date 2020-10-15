@@ -1,0 +1,145 @@
+<!-- 公共头部 -->
+<my-title></my-title>
+<!-- 首页导航 -->
+<view class="nav">
+    <!-- 自己滚动区域的组件 -->
+    <scroll-view class="scroll-container">
+        <view id="nav{{index}}" bindtap="tapTab" data-index="{{index}}" class="scroll-item {{currentIndex===index?'active':''}}" wx:for="{{navList}}" wx:key="index">
+            {{item.text}}
+        </view>
+        <!-- 下划线 left & width值是动态赋值-->
+        <view class="line" style="left:{{lineLeft}}px;width:{{lineWidth}}px"></view>
+    </scroll-view>
+</view>
+<!-- <image class="lives-right-img" src='../../images/Camaro.png' mode='aspectFill'  catchtap="bindAdd"/>
+<view class='lineview' ></view> -->
+
+<swiper class="tab" current="{{currentIndex}}" duration="300" bindchange="swiperTab">
+    <swiper-item>
+        <scroll-view scroll-y style="height: 100%;">
+            <view class="videos">
+                <!-- 跳转url时传递id参数 -->
+                <navigator class="video-item" url="/pages/detail/detail?id={{item.fields.Activity_ID}}" wx:for="{{momentList1}}" wx:key="index">
+                    <!-- 图片容器 -->
+                    <view class="weui-cell1">
+                        <view class="video-title">
+                        {{item.fields.Activity_topic}}
+                        <!-- 内容 -->
+                        <view class="context">{{item.fields.Activity_content}}</view>
+                        </view>
+                        
+                        <!-- 点赞、收藏、评论量 -->
+                        <view class="video-info">
+                            <!-- 点赞量 -->
+                            <view class="play-count-container">
+                            <image mode="widthFix" src="/icon/thumb.png"/>
+                                <!-- <text>{{item.fields.Num_activity_like}}</text> -->
+                                <text>{{item.fields.Num_activity_like}}</text>
+                            </view>
+                            <view class="play-count-container">
+                                <text>{{item.fields.User_ID}}</text>
+                            </view>
+
+                            <!-- 评论量 -->
+                            <view class="play-count-container">
+                                <image mode="widthFix" src="/icon/comment.png"/>
+                                <!-- <text>{{item.fields.Num_activity_replies}}</text> -->
+                                <text>{{item.fields.Num_activity_replies}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 标题 -->
+                </navigator>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item>
+        <scroll-view scroll-y style="height: 100%;">
+            <view class="videos">
+                <!-- 跳转url时传递id参数 -->
+                <navigator class="video-item" url="../detail/detail?id={{item.fields.Activity_ID}}" wx:for="{{momentList2}}" wx:key="index">
+                    <!-- 图片容器 -->
+                    <view class="weui-cell1">
+                        <view class="video-title">
+                        {{item.fields.Activity_topic}}
+                        <!-- 内容 -->
+                        <view class="context">{{item.fields.Activity_content}}</view>
+                        </view>
+                        
+                        <!-- 点赞、收藏、评论量 -->
+                        <view class="video-info">
+                            <!-- 点赞量 -->
+                            <view class="play-count-container">
+                            <image mode="widthFix" src="/icon/thumb.png"/>
+                                <text>{{item.fields.Num_activity_like}}</text>
+                            </view>
+                            <!-- 用户名 -->
+                            <view class="play-count-container">
+                                <text>{{item.fields.User_ID}}</text>
+                            </view>
+
+                            <!-- 评论量 -->
+                            <view class="play-count-container">
+                                <image mode="widthFix" src="/icon/comment.png"/>
+                                <text>{{item.fields.Num_activity_replies}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 标题 -->
+                </navigator>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item>
+        <scroll-view scroll-y style="height: 100%;">
+            <view class="videos">
+                <!-- 跳转url时传递id参数 -->
+                <navigator class="video-item" url="../detail/detail?id={{item.fields.Activity_ID}}" wx:for="{{momentList3}}" wx:key="index">
+                    <!-- 图片容器 -->
+                    <view class="weui-cell1">
+                        <view class="video-title">
+                        {{item.fields.Activity_topic}}
+                        <!-- 内容 -->
+                        <view class="context">{{item.fields.Activity_content}}</view>
+                        </view>
+                        
+                        <!-- 点赞、收藏、评论量 -->
+                        <view class="video-info">
+                            <!-- 点赞量 -->
+                            <view class="play-count-container">
+                            <image mode="widthFix" src="/icon/thumb.png"/>
+                                <text>{{item.fields.Num_activity_like}}</text>
+                            </view>
+                            <view class="play-count-container">
+                                <text>{{item.fields.User_ID}}</text>
+                            </view>
+
+                            <!-- 评论量 -->
+                            <view class="play-count-container">
+                                <image mode="widthFix" src="/icon/comment.png"/>
+                                <text>{{item.fields.Num_activity_replies}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 标题 -->
+                </navigator>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item>
+        <scroll-view scroll-y style="height: 100%;">
+        <view class="videos">
+            <!-- 跳转url时传递id参数 -->
+            <navigator class="video-item1" url="../tab/tab?id={{item.fields.Tab_content}}" wx:for="{{labelList}}" wx:key="index">
+                <!-- 图片容器 -->
+                <view class="weui-cell2">
+                   <view class="video-title1">
+                        {{item.fields.Tab_content}}
+                        <!-- 内容 -->
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>

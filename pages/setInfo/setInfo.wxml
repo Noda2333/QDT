@@ -1,0 +1,21 @@
+<view class="page">
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="weui-cells__title">个性签名</view>
+  <!-- <view class="weui-cells weui-cells_after-title"> -->
+    <view class="weui-cell1">
+        <textarea class="weui-textarea1" maxlength="200" name="content" value='{{content}}' placeholder="{{sign}}" style="height:10em" auto-focus="{{true}}" />
+    </view>
+  <!-- </view> -->
+
+
+
+
+  <!-- <button class="weui-btn page_btn_spacing" type="submit">发布动态</button> -->
+  <button class="buttona" form-type="submit">修改签名</button>
+
+  <view style='height:80px'></view>
+
+</form>
+
+</view>

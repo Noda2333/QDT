@@ -1,0 +1,7 @@
+<!--pages/my/userList/userList.wxml-->
+<view wx:for="{{userList}}" wx:key="index">
+  <view class='msgListView'>
+    <text class='MsgTxt' >{{item.fields.Nickname}}</text>
+    <button class='but' bindtap="ban" id="{{item.fields.User_ID}}">设置禁言</button>
+  </view>
+</view>

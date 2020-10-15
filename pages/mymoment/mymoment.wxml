@@ -1,0 +1,29 @@
+<view class="videos">
+                <!-- 跳转url时传递id参数 -->
+                <navigator class="video-item" url="/pages/detail/detail?id={{item.fields.Activity_ID}}" wx:for="{{momentList}}" wx:key="index">
+                    <!-- 图片容器 -->
+                    <view class="weui-cell1">
+                        <view class="video-title">
+                        {{item.fields.Activity_topic}}
+                        <!-- 内容 -->
+                        <view class="context">{{item.fields.Activity_content}}</view>
+                        </view>
+                        
+                        <!-- 点赞、收藏、评论量 -->
+                        <view class="video-info">
+                            <!-- 点赞量 -->
+                            <view class="play-count-container">
+                            <image mode="widthFix" src="/icon/thumb.png"/>
+                                <text>{{item.fields.Num_activity_like}}</text>
+                            </view>
+
+                            <!-- 评论量 -->
+                            <view class="play-count-container">
+                                <image mode="widthFix" src="/icon/comment.png"/>
+                                <text>{{item.fields.Num_activity_replies}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 标题 -->
+                </navigator>
+            </view>

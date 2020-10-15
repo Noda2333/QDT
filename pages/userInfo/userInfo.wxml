@@ -1,0 +1,5 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class = "username">
+<text>{{nickName}}</text>
+</view>
+<text>个性签名：{{sign}}</text>

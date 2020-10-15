@@ -1,0 +1,14 @@
+<scroll-view scroll-y style="height: 100%;">
+        <view class="videos">
+            <!-- 跳转url时传递id参数 -->
+            <navigator class="video-item1" url="/pages/tab/tab?id={{item.fields.Tab_content}}" wx:for="{{followList}}" wx:key="index">
+                <!-- 图片容器 -->
+                <view class="weui-cell2">
+                   <view class="video-title1">
+                        {{item.fields.Tab_content}}
+                        <!-- 内容 -->
+                    </view>
+                </view>
+            </navigator>
+        </view>
+</scroll-view>
